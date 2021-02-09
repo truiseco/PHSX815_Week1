@@ -47,6 +47,7 @@ int main(int argc, char* argv[]){
 
   int N = 5000; // 5000 random data points
 
+  // output space-delimited numbers to data file named data.txt
   std::ofstream outFile;
   std::string fileName = "data.txt";
   outFile.open(fileName);
@@ -55,7 +56,7 @@ int main(int argc, char* argv[]){
   }
   outFile.close();
 
-
+  // copy random numbers from data.txt to a vector x
   std::ifstream inFile;
   double temp = 0.0;
   vector<double> x;
@@ -64,7 +65,8 @@ int main(int argc, char* argv[]){
     inFile >> temp;
     x.push_back(temp);
   }
-  
+  inFile.close();
+
   plt::figure(); // declare a new figure (optional if only one is used)
 
   // formating options for our figure
