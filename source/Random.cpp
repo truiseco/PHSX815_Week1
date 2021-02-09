@@ -1,8 +1,8 @@
 /*************************************************************
 * @author   Triston Ruiseco
 * @file     Random.cpp
-* @date     04/15/2019
-* @brief    Implementation file for Pokedex.h.
+* @date     02/08/2021
+* @brief    Implementation file for Random.h.
 *************************************************************/
 #include "Random.h"
 
