@@ -26,7 +26,7 @@ class Random
     * @post none
     * @return random 64 bit int
     */
-    unsinged long long int64();
+    unsigned long long int64();
 
     /**
     * @pre none

@@ -6,7 +6,7 @@
 *************************************************************/
 #include "Random.h"
 
-Random::Random(unsigned long long seed = 5555){
+Random::Random(unsigned long long seed /*=5555*/){
   m_v = 4101842887655102017LL;
   m_w = 1;
 
@@ -18,7 +18,7 @@ Random::Random(unsigned long long seed = 5555){
   int64();
 }
 
-unsinged long long Random::int64(){
+unsigned long long Random::int64(){
   m_u = m_u * 2862933555777941757LL + 7046029254386353087LL;
   m_v ^= m_v >> 17;
   m_v ^= m_v << 31;

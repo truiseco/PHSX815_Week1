@@ -6,14 +6,14 @@
 *************************************************************/
 
 #include <fstream>
-#include "random.h"
+#include "Random.h"
 #include "matplotlibcpp.h"
 
 
 namespace plt = matplotlibcpp;
 
 int main(int argc, char* argv[]){
-  bool help = 0;
+  bool printhelp = 0;
   long seed = 133742069;
 
   // parse user's command line args
@@ -32,10 +32,10 @@ int main(int argc, char* argv[]){
 
   // print flags if requested
   if(printhelp){
-    cout << "Usage: " << argv[0] << " [options]" << endl;
-    cout << "  options:" << endl;
-    cout << "   --help(-h)          print options" << endl;
-    cout << "   -seed [number]      random seed to use" << endl;
+    std::cout << "Usage: " << argv[0] << " [options]" << std::endl;
+    std::cout << "  options:" << std::endl;
+    std::cout << "   --help(-h)          print options" << std::endl;
+    std::cout << "   -seed [number]      random seed to use" << std::endl;
 
     return 0;
   }
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]){
   // copy random numbers from data.txt to a vector x
   std::ifstream inFile;
   double temp = 0.0;
-  vector<double> x;
+  std::vector<double> x;
   inFile.open(fileName);
   for(int i = 0; i < N; ++i){
     inFile >> temp;
